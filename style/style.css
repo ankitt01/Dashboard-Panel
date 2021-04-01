@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+main {
+  background-color: #eff5ff;
+}
+
 nav {
   padding: 1em 2em;
   margin-left: auto;
@@ -24,9 +28,10 @@ nav {
 
 nav i {
   margin-right: 0.7em;
-  font-size: 20px;
+  font-size: 25px;
   position: relative;
-  color: #e7e7e7;
+  color: #fff;
+  cursor: pointer;
 }
 
 nav i::after {
@@ -34,14 +39,20 @@ nav i::after {
   position: absolute;
   width: 200%;
   height: 200%;
-  background-color: #fb5454;
+  background-color: #ee555d;
   top: -50%;
   left: -50%;
   border-radius: 50%;
   z-index: -1;
 }
 
-nav input {
+nav .search {
+  margin: 0px auto;
+  display: none;
+  position: relative;
+}
+
+nav .search i {
   display: none;
 }
 
@@ -56,5 +67,95 @@ nav img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+nav .nav-right {
+  cursor: pointer;
+}
+
+nav .nav-right p {
+  color: #8390A2;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.home-tiles {
+  display: -ms-grid;
+  display: grid;
+}
+
+.home-tiles .tile {
+  margin: 1em 2em;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.home-tiles .tile .text h1 {
+  font-size: 40px;
+}
+
+.home-tiles .tile .text p {
+  color: #8390A2;
+  font-family: 'Roboto', sans-serif;
+}
+
+.home-tiles .tile:hover {
+  background-color: #ee555d;
+}
+
+.home-tiles .tile:hover i {
+  color: white;
+}
+
+.home-tiles .tile:hover .text {
+  color: white;
+}
+
+.home-tiles .tile:hover .text p {
+  color: white;
+}
+
+.home-tiles .tile i {
+  color: #ee555d;
+  font-size: 50px;
+}
+
+@media screen and (min-width: 1000px) {
+  nav .search {
+    display: block;
+  }
+  nav .search input {
+    border-radius: 20px;
+    padding: 1em;
+    padding-left: 40px;
+    border: none;
+    outline: none;
+    position: relative;
+    border: 1px solid #e2e2e2;
+  }
+  nav .search i {
+    display: block;
+    color: lightgray;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  nav .search i::after {
+    all: unset;
+  }
+  nav h2 {
+    margin-right: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
