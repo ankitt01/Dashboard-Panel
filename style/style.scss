@@ -116,6 +116,7 @@ nav {
     background-color: #fff;
     margin: 1em 2em;
     padding: 1em;
+    max-width: 700px;
     .header {
         padding: 20px 0;
         display: flex;
@@ -136,12 +137,42 @@ nav {
     table {
         width: 100%;
         text-align: left;
+        border-collapse: collapse;
+        width: 100%;
         th {
-            padding: 10px 0 0 0;
+            padding: 10px 0 10px 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
         }
         td {
             padding: 10px 0;
         }
+    }
+    .status-td {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+    .circle-purple {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: purple;
+        margin-right: 10px;
+    }
+    .circle-pink {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: pink;
+        margin-right: 10px;
+    }
+    .circle-orange {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: orange;
+        margin-right: 10px;
     }
 }
 
